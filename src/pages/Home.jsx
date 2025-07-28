@@ -10,6 +10,11 @@ const Home = () => {
                 <button className='py-4 bg-blue-300 rounded-lg px-4 hover:bg-blue-400' onClick={() => navigate("/reducer")}>
                     Go UseReducer
                 </button>
+
+                <button className='py-4 bg-red-300 rounded-lg px-4 ml-5 hover:bg-red-400' onClick={() => navigate("/reducerMem")}>
+                    ReduceAgain                </button>
+                <button className='py-4 bg-green-300 rounded-lg px-4 ml-5 hover:bg-green-400' onClick={() => navigate("/reduceForm")}>
+                    ReduceForm                </button>
             </div>
         </div>
     )
