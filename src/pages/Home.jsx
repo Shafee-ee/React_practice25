@@ -27,6 +27,8 @@ const Home = () => {
 
                 <button className='py-4 bg-green-300 rounded-lg px-4 ml-5 hover:bg-green-400' onClick={() => navigate("/FocusInput")}>
                     FocusInput                </button>
+
+                <button className='py-4 px-4 rounded bg-gray-300 ml-5 hover:bg-gray-400' onClick={() => navigate("/MultiInputParent")}>MultiInputParent</button>
             </div>
         </div>
     )
