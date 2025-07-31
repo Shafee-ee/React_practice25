@@ -1,7 +1,6 @@
-import React, { forwardRef, useImperativeHandle, useRef } from 'react'
+import React, { forwardRef, useRef, useImperativeHandle } from "react";
 
-const MultiInputChild = forwardRef((props, ref) => {
-
+const MultiInputChild = forwardRef((prop, ref) => {
     const firstRef = useRef();
     const lastRef = useRef();
 
@@ -9,28 +8,33 @@ const MultiInputChild = forwardRef((props, ref) => {
         focusFirstName: () => {
             firstRef.current.focus();
         },
+        clearBoth: () => {
+            lastRef.current.value = "";
+            firstRef.current.value = "";
+        },
         focusLastName: () => {
             lastRef.current.focus();
         },
-        clearBoth: () => {
-            firstRef.current.value = "";
-            lastRef.current.value = "";
+        markInvalid: () => {
+            lastRef.current.classList.add("border-red-200", "border-4")
+            firstRef.current.classList.add("border-red-200", "border-4")
+            console.log("mark Invalid")
         }
     }))
+
     return (
-        <div className='p-4 border'>
-            <h3>Child:Multi Input</h3>
+        <div>
             <input type="text"
                 ref={firstRef}
-                placeholder='First Name...'
-                className='border p-2 mb-2 block w-full' />
+                placeholder="Enter a name..."
+                className="p-3 border-gray-200 border" />
+
             <input type="text"
                 ref={lastRef}
-                placeholder='Last Name...'
-                className='border p-2 block w-full' />
-
+                placeholder="Enter a name..."
+                className="p-3 border-gray-200 border" />
         </div>
     )
 })
 
-export default MultiInputChild
+export default MultiInputChild;
