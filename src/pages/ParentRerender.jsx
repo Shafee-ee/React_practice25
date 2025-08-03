@@ -21,6 +21,8 @@ const ParentRerender = () => {
 
             <ChildRerender onClick={handleChildClick} />
             <ChildRerender onClick={handleChildClick} />
+
+            <ChildRerender onClick={handleChildClick} />
         </div>
     )
 }
