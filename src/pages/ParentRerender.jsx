@@ -18,6 +18,8 @@ const ParentRerender = () => {
             <h2>Parent Count:{count}</h2>
             <p>Count is: {count}</p>
             <button onClick={() => setCount(count + 1)}>Increment</button>
+            <button onClick={() => setCount(count + 1)}>Increment</button>
+
 
             <ChildRerender onClick={handleChildClick} />
             <ChildRerender onClick={handleChildClick} />
